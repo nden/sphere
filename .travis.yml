@@ -30,7 +30,7 @@ env:
     global:
         # Set defaults to avoid repeating in most cases
         - PYTHON_VERSION=3.6
-	- NUMPY_VERSION=stable
+        - NUMPY_VERSION=stable
         - MAIN_CMD='python setup.py'
         # Build against github source until asdf-2.0 has been released
         - ASDF_GIT='git+git://github.com/spacetelescope/asdf.git#egg=asdf'
@@ -102,7 +102,7 @@ matrix:
         # Numpy 1.11 is tested below, 1.12 in the Initial stage test.
         # Run this test using native pytest
         - os: linux
-          env: PYTHON_VERSION=3.5 NUMPY_VERSION=1.10
+          env: PYTHON_VERSION=3.5 NUMPY_VERSION=1.11
                INSTALL_CMD='python setup.py build_ext --inplace'
                PIP_DEPENDENCIES='pytest-astropy'
                TEST_CMD='pytest --open-files --doctest-rst'
